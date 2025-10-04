@@ -1,0 +1,74 @@
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #E0E1DD;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none; /* user-select for Mac & IOS */
+    user-select: none; /* user-select for Android */
+}
+
+html, body {
+    background-color: #1b263b;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+#title-and-menu {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    & h1 {
+        font-size: 35px;
+    }
+    & h2 {
+        font-style: italic;
+    }
+} 
+
+.difficulty-button, .grid-button {
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover {
+        transition: .5s;
+        /* background-color: #384b70; */
+        background-color: #6d92db;
+        color: #1B263B;
+    }
+
+    &:active {
+        transition: .1s;
+        background-color: #7ba4f5;
+        color: #1B263B;
+    }
+}
+
+.difficulty-button {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    height: 30px;
+    width: 101px;
+    font-size: 20px;
+    color: #5b7ab8;
+    background: none;
+}
+
+#minefield {
+    margin-top: 5px;
+    display: grid;
+    gap: 2px;
+    justify-content: center;
+}
+
+.grid-button {
+    --gridTileSize: 35px;
+    border: none; 
+    border-radius: 3px;
+    width: var(--gridTileSize); 
+    height: var(--gridTileSize); 
+    background-color: #4e6aa0; 
+    box-sizing: border-box;
+    margin: 0;
+}
